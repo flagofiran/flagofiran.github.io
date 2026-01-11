@@ -410,4 +410,50 @@ main > section {
 
 body {
   background: #f6f7f9;
+
+}
+
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+.button-row {
+  flex-wrap: nowrap;
+}
+
+
+@media (max-width: 720px) {
+  .button-row {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .button-row .btn {
+    white-space: normal;
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+
+  .card .preview + .button-row {
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 720px) {
+  .item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .item .actions {
+    flex-wrap: wrap;
+  }
+
+  .item .actions .btn {
+    flex: 1 1 100%;
+  }
 }
